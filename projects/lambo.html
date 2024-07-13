@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamborghini - The Italian Supercar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color:lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2 {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+}
+
+form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Header Styles */
+header {
+  background-color:#969497;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Main Styles */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Lamborghini - The Italian Supercar</h1>
+  </header>
+  
+  <main>
+    <section id="about">
+      <h2>About Lamborghini</h2>
+      <p>Lamborghini is an Italian luxury sports car manufacturer that was founded in 1963 by Ferruccio Lamborghini. The company is known for producing high-performance sports cars that are often recognized for their sleek and unique designs, powerful engines, and advanced technology.</p>
+      <p>Lamborghini has a long history of producing some of the world's most iconic and legendary cars, including the Countach, Diablo, Murciélago, Gallardo, and Aventador.</p>
+    </section>
+    
+    <section id="models">
+      <h2>Lamborghini Models</h2>
+      <ul>
+        <li>Lamborghini Aventador</li>
+        <li>Lamborghini Huracán</li>
+        <li>Lamborghini Urus</li>
+        <li>Lamborghini Sian</li>
+      </ul>
+      <p>Each Lamborghini model is designed with advanced technology and features, as well as a unique and iconic design that sets it apart from other sports cars. Lamborghini cars are often associated with speed, luxury, and exclusivity, making them a popular choice for car enthusiasts around the world.</p>
+    </section>
+    
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="image-container">
+        <img src="avendator.webp" alt="Lamborghini Aventador">
+        <img src="huracan.avif" alt="Lamborghini Huracan">
+        <img src="ururs.webp" alt="Lamborghini Urus">
+        <img src="sian.jpg" alt="Lamborghini Sian">
+      </div>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Lamborghini - The Italian Supercar. All rights reserved.</p>
+  </footer>
+</body>
+</html>

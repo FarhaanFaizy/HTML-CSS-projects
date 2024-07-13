@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  font-size: 24px;
+  text-align: right;
+}
+
+.btn {
+  font-size: 20px;
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #c82333;
+  border-color: #bd2130;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: #fff;
+}
+
+    </style>
+ </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Calculator</h1>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="result" readonly>
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" value="1" onclick="appendToResult('1')">
+          <input type="button" class="btn btn-primary" value="2" onclick="appendToResult('2')">
+          <input type="button" class="btn btn-primary" value="3" onclick="appendToResult('3')">
+          <input type="button" class="btn btn-danger" value="C" onclick="clearResult()">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" value="4" onclick="appendToResult('4')">
+          <input type="button" class="btn btn-primary" value="5" onclick="appendToResult('5')">
+          <input type="button" class="btn btn-primary" value="6" onclick="appendToResult('6')">
+          <input type="button" class="btn btn-primary" value="+" onclick="appendToResult('+')">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" value="7" onclick="appendToResult('7')">
+          <input type="button" class="btn btn-primary" value="8" onclick="appendToResult('8')">
+          <input type="button" class="btn btn-primary" value="9" onclick="appendToResult('9')">
+          <input type="button" class="btn btn-primary" value="-" onclick="appendToResult('-')">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" value="0" onclick="appendToResult('0')">
+          <input type="button" class="btn btn-primary" value="." onclick="appendToResult('.')">
+          <input type="button" class="btn btn-primary" value="*" onclick="appendToResult('*')">
+          <input type="button" class="btn btn-primary" value="/" onclick="appendToResult('/')">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-success" value="=" onclick="calculateResult()">
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      var result = "";
+      function appendToResult(value) {
+        result += value;
+        $("#result").val(result);
+      }
+      function clearResult() {
+        result = "";
+        $("#result").val(result);
+      }
+      function calculateResult() {
+        result = eval(result);
+        $("#result").val(result);
+      }
+    </script>
+  </body>
+</html>

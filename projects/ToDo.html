@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			padding: 10px;
+			margin: 10px;
+			background-color: #eee;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px #ccc;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 2px 2px 5px #ccc;
+			width: 80%;
+			margin-right: 10px;
+		}
+
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>To-Do List</h1>
+	<form>
+		<input type="text" id="todo" placeholder="Add a to-do item...">
+		<button type="button" onclick="addTodo()">Add</button>
+	</form>
+	<ul id="todoList"></ul>
+
+	<script>
+		function addTodo() {
+			var input = document.getElementById("todo");
+			var item = input.value;
+			input.value = "";
+
+			if (item !== "") {
+				var list = document.getElementById("todoList");
+				var li = document.createElement("li");
+				li.innerHTML = item;
+				list.appendChild(li);
+			}
+		}
+	</script>
+</body>
+</html>
